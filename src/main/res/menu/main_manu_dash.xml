@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/navpaths1"
+            android:title="@string/paths"
+      />
+
+        <item
+            android:id="@+id/navallpieces2"
+            android:title="@string/all_pieces"
+            />
+
+    </group>
+
+    <item android:title="@string/about">
+        <menu>
+        <item
+            android:id="@+id/appinfo1"
+            android:title="@string/app_info"
+            />
+
+        </menu>
+    </item>
+
+</menu>

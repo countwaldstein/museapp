@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Museapp</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="Start">Start</string>
+    <string name="title_activity_first_time_path">FirstTimePath</string>
+    <string name="title_activity_sub_path">SubPathActivity</string>
+    <string name="title_activity_main_dash_board">MainDashBoard</string>
+    <string name="title_activity_add_path">AddPath</string>
+    <string name="title_activity_path_view">PathView</string>
+    <string name="title_activity_piece_rating">PieceRatingActivity</string>
+    <string name="title_activity_piece_rating2">PieceRating2</string>
+    <string name="title_activity_all_pieces_list">AllPiecesList</string>
+    <string name="title_activity_first_time">FirstTimeActivity</string>
+
+    <string name="composer_paths">Composer Paths</string>
+    <string name="period_paths">Period Paths</string>
+    <string name="composition_type_paths">Composition Type Paths</string>
+    <string name="paths">Paths</string>
+    <string name="all_pieces">All Pieces</string>
+    <string name="about">About</string>
+    <string name="app_info">App Info</string>
+    <string name="select_your_path_type">Select your path type</string>
+    <string name="composers">Composers</string>
+    <string name="continue_discovery">Continue discovery...</string>
+    <string name="warning_delete">Warning: deleting path will also erase path ratings! Do you want to proceed?</string>
+    <string name="slogan">An app to muse you up</string>
+    <string name="select_your_first_path_type">Select your first path type</string>
+    <string name="left_unrated">Left unrated: </string>
+    <string name="pieces_rated">Pieces rated: </string>
+    <string name="swipe_up_to_rate">Swipe up to rate</string>
+    <string name="rating">Rating</string>
+    <string name="key_overall_mood">Key (overall mood):</string>
+    <string name="composition_type_r">Composition type:</string>
+    <string name="dynamics">Dynamics:</string>
+    <string name="next_piece">Next piece</string>
+    <string name="menu">Menu</string>
+    <string name="composer">Composer</string>
+    <string name="period">Period</string>
+    <string name="composition_type">Composition type</string>
+    <string name="welcome">Welcome to Museapp</string>
+    <string name="start">Start</string>
+    <string name="press_start">Press start to continue</string>
+    <string name="path_deleted">path deleted.</string>
+    <string name="composer_path_v">Composer path:</string>
+    <string name="piece_type_path_v">Piece type path:</string>
+    <string name="piece_period_path_v">Piece period path:</string>
+    <string name="no_pieces_to_rate">No pieces left to rate</string>
+
+
+
+
+
+</resources>

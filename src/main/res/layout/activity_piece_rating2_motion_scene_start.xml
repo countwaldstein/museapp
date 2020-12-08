@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rel1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
+    android:orientation="vertical"
+    tools:context=".rating.PieceRatingActivity">
+
+
+    <view
+        android:id="@+id/youtubeview"
+        class="com.google.android.youtube.player.YouTubePlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/mot1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_piece_rating2_scene">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/title_piece_rating_su"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linlay2">
+
+
+            <TextView
+                android:id="@+id/textGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/acme"
+                android:text="Swipe up to rate"
+                android:textColor="@android:color/white"
+                android:textSize="34sp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linlay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <RelativeLayout
+                android:id="@+id/rellay1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/aprt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/acme"
+
+                    android:text="Title"
+                    android:textColor="@android:color/black"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/aprt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aprt1"
+                    android:fontFamily="@font/acme"
+                    android:text="Composer"
+                    android:textColor="@android:color/black"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/aprt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aprt2"
+                    android:fontFamily="@font/acme"
+                    android:text="Period, "
+                    android:textColor="@android:color/black"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/aprt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/aprt3"
+                    android:layout_toRightOf="@id/aprt3"
+                    android:fontFamily="@font/acme"
+                    android:text="Type"
+                    android:textColor="@android:color/black"
+                    android:textSize="24dp" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/aprt4"
+                    android:layout_marginBottom="50dp">
+
+                    <TextView
+                        android:id="@+id/aprt5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/aprt4"
+                        android:text="Description/n /nbbbbbbnbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvdfdfgfghfjcfhgdbgfbvgfbvgfbvgfbvgfbvgfbgvfbvbfgvbfgvbgfbvbhfvbfgvbfgvbgfbvgfbvgfbvgfvgfbvgfbvgffgfgfgfgfggfgfgfgfgfgfhyfghdgfhdfhdghfgdhfgdhfghdgfhdgfhdhdhdhgfhffgfgfgfgfgfgfgufhgufhuhfughufhgufufhufhughfughfuhgufhgufhgufhguvccvcvcvcvcvcvcvcvcvcvcvcvcvcvcvcvcvcvcvcvccvcvcvbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvdfdfgfghfjcfhgdbgfbvgfbvgfbvgfbvgfbvgfbgvfbvbfgvbfgvbgfbvbhfvbfgvbfgvbgfbvgfbvgfbvgfvgfbvgfbvgffgfgfgfgfggfgfgfgfgfgfhyfghdgfhdfhdghfgdhfgdhfghdgfhdgfhdhdhdhgfhffgfgfgfgfgfgfgufhgufhuhfughufhgufufhufhughfughfuhgufhgufhgufhguvccvcvcvcvcvcvcvcvcvcvcvcvcvcvcvcvcvcvcvcvccvcvcv"
+                        android:textColor="#737373"
+                        android:textSize="18dp" />
+
+                </ScrollView>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSplashDark"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+            <TextView
+                android:id="@+id/rtext1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Rating"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/rtext3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rtext1"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="12dp"
+                android:text="Key (Overall mood)"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <RatingBar
+                android:id="@+id/rratingBar1"
+                style="@android:style/Widget.Holo.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rtext3"
+                android:layout_centerHorizontal="true"
+                android:isIndicator="false"
+                android:saveEnabled="true"
+                android:numStars="5"
+                android:stepSize="1" />
+
+            <TextView
+                android:id="@+id/rtext4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rratingBar1"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="12dp"
+                android:text="Composition type:"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <RatingBar
+                android:id="@+id/rratingBar2"
+                style="@android:style/Widget.Holo.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rtext4"
+                android:layout_centerHorizontal="true"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:stepSize="1" />
+
+            <TextView
+                android:id="@+id/rtext5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rratingBar2"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="17dp"
+                android:text="Dynamics:"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <RatingBar
+                android:id="@+id/rratingBar3"
+                style="@android:style/Widget.Holo.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rtext5"
+                android:layout_centerHorizontal="true"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:stepSize="1" />
+
+            <Button
+                android:id="@+id/butt1"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="Next Piece" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</LinearLayout>

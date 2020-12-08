@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_background"
+    android:orientation="vertical"
+    tools:context=".dashboard.MainDashBoard"
+    >
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/allpieces_navigationview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#F3F3F3"
+        android:theme="@style/NavigationTheme"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_manu_dash"/>
+
+    <LinearLayout
+        android:id="@+id/content_allpieces"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/design_default_color_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/nav_open_button_dash"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/hamburger1" />
+        </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/allpiecestext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/acme"
+                        android:text="@string/all_pieces"
+                        android:textColor="@android:color/black"
+                        android:textSize="30sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/db_recycler_composers"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/allpiecestext" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
