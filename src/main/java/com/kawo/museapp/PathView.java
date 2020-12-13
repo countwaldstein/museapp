@@ -134,8 +134,12 @@ public class PathView extends AppCompatActivity {
 
 
         int count = 0;
+        String selectQuery="";
+        if (type.equals("PIECE_TYPE")) {selectQuery = "SELECT   * FROM PIECES   LEFT  Join (Select * FROM SCORES where SCORES_TYPE='" + type + "' and SCORES_SUBTYPE='" + subtype + "')a On PIECES.PIECE_ID=a.SCORES_PIECE_ID where SCORES_TYPE is null and PIECE_TYPE='"+subtype+"'" ; }
+        else if (type.equals("PIECE_COMPOSER")){selectQuery = "SELECT   * FROM PIECES   LEFT  Join (Select * FROM SCORES where SCORES_TYPE='" + type + "' and SCORES_SUBTYPE='" + subtype + "')a On PIECES.PIECE_ID=a.SCORES_PIECE_ID where SCORES_TYPE is null and PIECE_COMPOSER='"+subtype+"'";}
+        else if (type.equals("PIECE_PERIOD")){selectQuery = "SELECT   * FROM PIECES   LEFT  Join (Select * FROM SCORES where SCORES_TYPE='" + type + "' and SCORES_SUBTYPE='" + subtype + "')a On PIECES.PIECE_ID=a.SCORES_PIECE_ID where SCORES_TYPE is null and PIECE_PERIOD='"+subtype+"'";}
 
-        String selectQuery = "SELECT   * FROM PIECES   LEFT  Join (Select * FROM SCORES where SCORES_TYPE='" + type + "' and SCORES_SUBTYPE='" + subtype + "')a On PIECES.PIECE_ID=a.SCORES_PIECE_ID where SCORES_TYPE is null";
+
 
         Cursor cursor = mDataBase.rawQuery(selectQuery, null);
 

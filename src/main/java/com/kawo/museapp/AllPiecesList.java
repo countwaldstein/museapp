@@ -132,7 +132,7 @@ public class AllPiecesList extends AppCompatActivity implements NavigationView.O
 
 
         ArrayList<ComRecyclerItem> arr = new ArrayList<>();
-        String selectQuery = "SELECT * FROM PIECES ";
+        String selectQuery = "SELECT * FROM PIECES ORDER BY PIECE_COMPOSER DESC ";
 
         Cursor cursor = mDataBase.rawQuery(selectQuery, null);
 

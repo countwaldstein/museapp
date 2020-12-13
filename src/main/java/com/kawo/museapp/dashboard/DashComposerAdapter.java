@@ -51,7 +51,7 @@ public class DashComposerAdapter extends RecyclerView.Adapter<DashComposerAdapte
         String h = dashBoardCardType.getTitle();
         char ch = h.charAt(0);
         if (Character.isDigit(ch))
-        {                Log.d("xDXDXD", h.substring(1));
+        {
             String g=h.substring(1);holder.title.setText(g);}
         else
 

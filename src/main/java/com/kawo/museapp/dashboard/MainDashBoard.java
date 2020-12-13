@@ -289,7 +289,7 @@ public class MainDashBoard extends AppCompatActivity implements NavigationView.O
         if (cursor.moveToFirst()) {
             do {
 
-                arr.add(new DashBoardCardType(getResources().getIdentifier(cursor.getString(cursor.getColumnIndex(DataBaseHelper.Strings.PATH_SUBTYPE)).toLowerCase(), "drawable", getPackageName()), cursor.getString(cursor.getColumnIndex(DataBaseHelper.Strings.PATH_SUBTYPE)),
+                arr.add(new DashBoardCardType(getResources().getIdentifier(cursor.getString(cursor.getColumnIndex(DataBaseHelper.Strings.PATH_SUBTYPE)).toLowerCase().replace(".", "").replace(" ", ""), "drawable", getPackageName()), cursor.getString(cursor.getColumnIndex(DataBaseHelper.Strings.PATH_SUBTYPE)),
                         getResources().getString(R.string.left_unrated) + Integer.toString(howManyUnratedLeft(type, cursor.getString(cursor.getColumnIndex(DataBaseHelper.Strings.PATH_SUBTYPE))))));
 
             } while (cursor.moveToNext());
@@ -305,7 +305,12 @@ public class MainDashBoard extends AppCompatActivity implements NavigationView.O
 
         int count = 0;
 
-        String selectQuery = "SELECT   * FROM PIECES   LEFT  Join (Select * FROM SCORES where SCORES_TYPE='" + type + "' and SCORES_SUBTYPE='" + subtype + "')a On PIECES.PIECE_ID=a.SCORES_PIECE_ID where SCORES_TYPE is null";
+        String selectQuery="";
+        if (type.equals("PIECE_TYPE")) {selectQuery = "SELECT   * FROM PIECES   LEFT  Join (Select * FROM SCORES where SCORES_TYPE='" + type + "' and SCORES_SUBTYPE='" + subtype + "')a On PIECES.PIECE_ID=a.SCORES_PIECE_ID where SCORES_TYPE is null and PIECE_TYPE='"+subtype+"'"; }
+        else if (type.equals("PIECE_COMPOSER")){selectQuery = "SELECT   * FROM PIECES   LEFT  Join (Select * FROM SCORES where SCORES_TYPE='" + type + "' and SCORES_SUBTYPE='" + subtype + "')a On PIECES.PIECE_ID=a.SCORES_PIECE_ID where SCORES_TYPE is null and PIECE_COMPOSER='"+subtype+"'";}
+        else if (type.equals("PIECE_PERIOD")){selectQuery = "SELECT   * FROM PIECES   LEFT  Join (Select * FROM SCORES where SCORES_TYPE='" + type + "' and SCORES_SUBTYPE='" + subtype + "')a On PIECES.PIECE_ID=a.SCORES_PIECE_ID where SCORES_TYPE is null and PIECE_PERIOD='"+subtype+"'";}
+
+
 
         Cursor cursor = mDataBase.rawQuery(selectQuery, null);
 
