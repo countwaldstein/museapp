@@ -47,8 +47,12 @@
     <string name="piece_type_path_v">Piece type path:</string>
     <string name="piece_period_path_v">Piece period path:</string>
     <string name="no_pieces_to_rate">No pieces left to rate</string>
-
-
+    <string name="title_activity_app_info">AppInfo</string>
+    <string name="author">Author:</string>
+    <string name="wojciechkaleta">Wojciech Kaleta</string>
+    <string name="version">Version:</string>
+    <string name="actualversion">v1.0.0b1</string>
+    <string name="info">The application was developed as part of an engineering thesis.</string>
 
 
 

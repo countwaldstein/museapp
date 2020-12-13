@@ -14,11 +14,14 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".AppInfo"
+            android:label="@string/title_activity_app_info"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".AllPiecesList"
             android:label="@string/title_activity_all_pieces_list"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".rating.PieceRatingActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -30,7 +33,6 @@
             android:label="@string/title_activity_path_view"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".dashboard.MainDashBoard"
             android:label="@string/title_activity_main_dash_board"
@@ -59,6 +61,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

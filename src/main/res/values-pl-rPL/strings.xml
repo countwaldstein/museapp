@@ -45,4 +45,11 @@
     <string name="piece_type_path_v">Ścieżka typów utworów:</string>
     <string name="piece_period_path_v">Ścieżka okresów historycznych:</string>
     <string name="no_pieces_to_rate">Brak utworów do oceny</string>
+    <string name="title_activity_app_info">AppInfo</string>
+    <string name="author">Autor:</string>
+    <string name="wojciechkaleta">Wojciech Kaleta</string>
+    <string name="version">Wersja:</string>
+    <string name="actualversion">v1.0.0b1</string>
+    <string name="info">Aplikacja została zrealizowana w ramach pracy inżynierskiej.</string>
+
 </resources>

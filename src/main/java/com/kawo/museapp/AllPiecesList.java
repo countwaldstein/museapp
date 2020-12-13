@@ -108,13 +108,19 @@ public class AllPiecesList extends AppCompatActivity implements NavigationView.O
     }
 
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        Intent myIntent;
         switch (menuItem.getItemId()) {
             case R.id.navpaths1:
-                Intent myIntent = new Intent(AllPiecesList.this, MainDashBoard.class);
+                myIntent = new Intent(AllPiecesList.this, MainDashBoard.class);
                 AllPiecesList.this.startActivity(myIntent);finish();
                 break;
             case R.id.navallpieces2:break;
 
+            case R.id.appinfo1:
+                myIntent = new Intent(AllPiecesList.this, AppInfo.class);
+                AllPiecesList.this.startActivity(myIntent);
+                finish();
+                break;
 
         }
         return true;

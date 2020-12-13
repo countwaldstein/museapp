@@ -10,6 +10,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.kawo.museapp.AllPiecesList;
+import com.kawo.museapp.AppInfo;
 import com.kawo.museapp.DataBaseHelper;
 import com.kawo.museapp.PathView;
 import com.kawo.museapp.rating.PieceRatingActivity;
@@ -236,11 +237,17 @@ public class MainDashBoard extends AppCompatActivity implements NavigationView.O
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        Intent myIntent;
         switch (menuItem.getItemId()) {
             case R.id.navpaths1:
                 break;
             case R.id.navallpieces2:
-                Intent myIntent = new Intent(MainDashBoard.this, AllPiecesList.class);
+                myIntent = new Intent(MainDashBoard.this, AllPiecesList.class);
+                MainDashBoard.this.startActivity(myIntent);
+                finish();
+                break;
+            case R.id.appinfo1:
+                myIntent = new Intent(MainDashBoard.this, AppInfo.class);
                 MainDashBoard.this.startActivity(myIntent);
                 finish();
                 break;
