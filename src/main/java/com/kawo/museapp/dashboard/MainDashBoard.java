@@ -122,7 +122,7 @@ public class MainDashBoard extends AppCompatActivity implements NavigationView.O
                 myIntent.putExtra("Type", "PIECE_COMPOSER");
                 myIntent.putExtra("Subtype", composer);
                 MainDashBoard.this.startActivity(myIntent);
-
+                finish();
 
             }
         });
@@ -150,7 +150,7 @@ public class MainDashBoard extends AppCompatActivity implements NavigationView.O
                 myIntent.putExtra("Type", "PIECE_TYPE");
                 myIntent.putExtra("Subtype", composer);
                 MainDashBoard.this.startActivity(myIntent);
-
+                finish();
             }
         });
         if (arrayType.size() == 0) typeRecycler.setVisibility(View.GONE);
@@ -180,7 +180,7 @@ public class MainDashBoard extends AppCompatActivity implements NavigationView.O
                 myIntent.putExtra("Type", "PIECE_PERIOD");
                 myIntent.putExtra("Subtype", composer);
                 MainDashBoard.this.startActivity(myIntent);
-
+                finish();
 
             }
         });
