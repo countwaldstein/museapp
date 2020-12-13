@@ -48,7 +48,6 @@ public class MainDashBoard extends AppCompatActivity implements NavigationView.O
     DashComposerAdapter cadapter;
     DashComposerAdapter tadapter;
     DashComposerAdapter padapter;
-
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ImageView menuIcon;
@@ -59,7 +58,6 @@ public class MainDashBoard extends AppCompatActivity implements NavigationView.O
     LinearLayout contentView;
     private DataBaseHelper mDataBaseHelper;
     final PieceRatingActivity pr2 = new PieceRatingActivity();
-
     ImageView addButton;
 
 
